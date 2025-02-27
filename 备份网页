@@ -1,0 +1,117 @@
+
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Some Words To You</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="baidu-site-verification" content="AAxaXuMxjf" />
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: digital-7_mono.ttf format("truetype");
+		}
+	</style>
+	<link type="text/css" rel="stylesheet" href="default.css" >
+    <script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="garden.js" ></script>
+    <script type="text/javascript" src="functions.js" ></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* 在美丽的集大与美丽的你相遇.</span><br />
+				<span class="space"/><span class="comments">* 因此，我用我们所熟悉的代码来纪念我们的故事.</span><br />
+				<span class="space"/><span class="comments">* 这个网页我会一直保留，它只属于你.</span><br />
+				<span class="space"/><span class="comments">* 或许，你也不会再点进这个网页看到这几句话.</span><br />
+				<span class="space"/><span class="comments">* 或许，大学四年只是我们各自人生的唯一交集.</span><br />
+				<span class="space"/><span class="comments">* 或许，这也只不过是幸识一场.</span><br />
+				<span class="space"/><span class="comments">* 但还是.</span><br />
+				<span class="space"/><span class="comments">* 怎么就拒绝我了，难受.</span><br />
+				<span class="space"/><span class="comments">* 真的很喜欢你.</span><br />
+				<span class="space"/><span class="comments">* 哇，就，顿时.......</span><br />
+				<span class="space"/><span class="comments">* 唉</span><br />
+				<span class="space"/><span class="comments">* 那就，先这样了吧.</span><br />
+				<span class="space"/><span class="comments">* 后会，有期.</span><br />
+				<span class="space"/><span class="comments">* =================这里是分界线================</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"LCT"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"00"</span>);<br />
+				<span class="comments">// Sept,2018,I meet you. </span><br />
+				i.meet(u);<br />
+				<span class="comments">// 在集大的初次相遇，或许你还不认识我，但我已经对你留下了深刻的记忆 </span><br />
+				time++;<br />
+				<span class="comments">// 时间让我们有了更多的了解. </span><br />
+				i.girl = u;<br />
+				<span class="comments">// 慢慢地我发现，你就是我要找的女孩. </span><br />
+                i.heart = u;<br/>
+                <span class="comments">// 于是我决定向你表白.</span><br />
+                in_array(u,i.heart) = in_array(i,u.heart) = true;<br/>
+                <span class="comments">// 用我们独有的编程语言，表达你对我的特殊意义</span><br/>
+				if(u.love === i){<br />
+				<span class="placeholder"/>Appoinment  = u & i;<br />
+                <span class="comments">// 我们会有浪漫的约会. </span><br/>
+				<span class="placeholder"/>We.life = u.idea & i.idea;<br />
+                <span class="comments">// 我们可以享受很多美好的时光.</span><br/>
+				<span class="placeholder"/>i.liveHappilyTime(u);<br />
+				<span class="comments">// 我们一起规划美好生活的未来.</span><br />
+				}else{<br />
+				<span class="placeholder"/>i.goto = YourHeart;<br />
+				<span class="string1">// Would you be my girlfriend ^-^ --- ^-^</span><br />
+				}<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						00, I have fallen in love with you for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">- Lin_CT</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			Copyright @ 2020 LL
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2018, 9, 5);
+		together.setHours(10);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				adjustWordsPosition();
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
